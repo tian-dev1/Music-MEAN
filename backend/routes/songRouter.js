@@ -1,7 +1,7 @@
-/* Archivo para el manejo de rutas de usuario */
+/* Archivo para el manejo de rutas de canciones */
 
 const express = require('express');
-const UserControl = require ('../controllers/userController');
+const SongControl = require ('../controllers/songController');
 //importar el paquete connect-multiparty
 //const multipart = require('connect-multiparty');
 //A través de connect-multiparty, apuntamos a la carpeta que deseemos en que se guarden los archivos
@@ -9,19 +9,19 @@ const UserControl = require ('../controllers/userController');
 var api = express.Router();
 
 //Ruta Registrar usuario
-api.post('/registerUser', UserControl.registerUser);
+api.post('/registerSong', SongControl.registerSong);
 
 //Ruta Obtener todos los usuarios
-api.get('/getAllUsers', UserControl.getAllUsers);
+api.get('/getAllSongs', SongControl.getAllSongs);
 
 //Ruta Obtener todos los usuarios
-api.get('/getUser/:id', UserControl.getUser);
+api.get('/getSong/:id', SongControl.getSong);
 
 //Ruta Actualizar usuario
-api.put('/updateUser/:id', UserControl.updateUser);
+api.put('/updateSong/:id', SongControl.updateSong);
 
 //Ruta Eliminar usuario
-api.delete('/deleteUser/:id', UserControl.deleteUser);
+api.delete('/deleteSong/:id', SongControl.deleteSong);
 
 
 //Exportar el modulo
