@@ -32,7 +32,5 @@ api.post('/login', UserControl.login);
 api.put('/uploadImage/:id', subirImgDirectorio, UserControl.uploadImage);
 
 
-
-
 //Exportar el modulo
 module.exports = api;

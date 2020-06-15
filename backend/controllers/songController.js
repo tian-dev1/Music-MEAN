@@ -10,8 +10,11 @@ function registerSong(req, res){
     song.genre = parameters.genre;
     song.image = null;
     song.artists = parameters.artists;
-    song.albumName = parameters.albumName;
+    song.album = parameters.album;
     song.year = parameters.year;
+    
+    //console.log(parameters);
+    
 
     //Función save() para interactuar con la DB
     song.save((err, songNew)=>{
@@ -83,7 +86,7 @@ function updateSong(req, res){
             }else{
                 res.status(200).send({
                     message:"Canción actualizada",
-                    user: updatedSong
+                    song: updatedSong
                 });
             }
         }
@@ -103,7 +106,7 @@ function deleteSong(req, res){
             }else{
                 res.status(200).send({
                     message:"Canción eliminada",
-                    user: deletedSong
+                    song: deletedSong
                 });
             }
         }

@@ -9,7 +9,7 @@ var SongSchema = new Schema({
     genre: String,
     imagen: String,
     artists: [],
-    albumName: String,
+    album: [],
     year: Number,
     
 });
